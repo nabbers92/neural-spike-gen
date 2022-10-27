@@ -1,0 +1,3 @@
+# Neural Spike Generator
+This program uses the LeapMotion controller to record hand position and generate artificial neuron firings based on hand movement in a two-dimensional plane. 
+More to come...
