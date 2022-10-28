@@ -44,29 +44,21 @@ CFLAGS := -c
 INC := -I include $(INCLIST) -I /usr/local/include
 LIB := -L /usr/local/lib $(LEAP_LIBRARY)
 
+# Compilation and Linking
 $(TARGET): $(OBJECTS)
 	@mkdir -p $(TARGETDIR)
 	@echo "Linking..."
 	@echo "  Linking $(TARGET)"; $(CXX) $^ -o $(TARGET) $(LIB)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
-	@echo "$(BUILDLIST)"
 	@mkdir -p $(BUILDLIST)
 	@echo "Compiling $<..."; $(CXX) $(CFLAGS) $(INC) -c -o $@ $<
 
 ifeq ($(OS), Darwin)
 	install_name_tool -change @loader_path/libLeap.dylib ./lib/libLeap.dylib handTracker
 endif
-# Main Compilation
-# handTracker: src/main.cpp
-# 	$(CXX) -Wall -g -I./include src/main.cpp -o handTracker $(LEAP_LIBRARY)
-# ifeq ($(OS), Darwin)
-# 	install_name_tool -change @loader_path/libLeap.dylib ./lib/libLeap.dylib handTracker
-# endif
 
-# clean:
-# 	rm -rf handTracker handTracker.dSYM
-
+# Make Commands
 clean:
 	@echo "Cleaning $(TARGET)..."; $(RM) -r $(BUILDDIR) $(TARGET)
 
