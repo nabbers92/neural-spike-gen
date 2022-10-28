@@ -50,13 +50,13 @@ $(TARGET): $(OBJECTS)
 	@echo "Linking..."
 	@echo "  Linking $(TARGET)"; $(CXX) $^ -o $(TARGET) $(LIB)
 
+ifeq ($(OS), Darwin)
+	install_name_tool -change @loader_path/libLeap.dylib ./lib/libLeap.dylib $(TARGET)
+endif
+
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDLIST)
 	@echo "Compiling $<..."; $(CXX) $(CFLAGS) $(INC) -c -o $@ $<
-
-ifeq ($(OS), Darwin)
-	install_name_tool -change @loader_path/libLeap.dylib ./lib/libLeap.dylib handTracker
-endif
 
 # Make Commands
 clean:
