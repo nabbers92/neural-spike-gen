@@ -1,27 +1,28 @@
 #include <iostream>
 #include <string.h>
 #include "Leap.h"
+#include "sample_listener.h"
 
-using namespace Leap;
+// using namespace Leap;
 
-class SampleListener : public Listener {
-    public:
-    virtual void onConnect(const Controller&);
-    virtual void onFrame(const Controller&);
-};
+// class SampleListener : public Leap::Listener {
+//     public:
+//     virtual void onConnect(const Leap::Controller&);
+//     virtual void onFrame(const Leap::Controller&);
+// };
 
-void SampleListener::onConnect(const Controller& controller) {
-    std::cout << "Connected" << std::endl;
-}
+// void SampleListener::onConnect(const Leap::Controller& controller) {
+//     std::cout << "Connected" << std::endl;
+// }
 
-void SampleListener::onFrame(const Controller& controller) {
-    std::cout << "Frame available" << std::endl;
-}
+// void SampleListener::onFrame(const Leap::Controller& controller) {
+//     std::cout << "Frame available" << std::endl;
+// }
 
 int main(int argc, char** argv) {
 
     SampleListener listener;
-    Controller controller;
+    Leap::Controller controller;
 
     controller.addListener(listener);
 
