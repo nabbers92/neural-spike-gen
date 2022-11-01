@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string.h>
+
 #include "leap/leap.h"
 #include "listener/framelistener.h"
 

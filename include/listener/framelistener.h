@@ -4,6 +4,9 @@
 #include "leap/leap.h"
 
 class FrameListener : public Leap::Listener {
+    private:
+        int timeStart;
+
     public:
         FrameListener();
         virtual void onConnect(const Leap::Controller&);
