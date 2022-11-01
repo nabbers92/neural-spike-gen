@@ -6,8 +6,8 @@
 * between Leap Motion and you, your company or other organization.             *
 \******************************************************************************/
 
-#ifndef LEAPMATH_H
-#define LEAPMATH_H
+#ifndef LEAP_LEAPMATH_H
+#define LEAP_LEAPMATH_H
 
 #include <cmath>
 #include <iostream>
