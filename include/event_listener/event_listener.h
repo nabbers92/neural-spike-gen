@@ -1,11 +1,13 @@
-#ifndef SAMPLE_LISTENER_H
-#define SAMPLE_LISTENER_H
+#ifndef EVENT_LISTENER_H
+#define EVENT_LISTENER_H
 #include "Leap.h"
 
-class SampleListener : public Leap::Listener {
+class EventListener : public Leap::Listener {
     public:
+        EventListener();
         virtual void onConnect(const Leap::Controller&);
         virtual void onFrame(const Leap::Controller&);
+        // void helloWorld();
 };
 
 #endif
