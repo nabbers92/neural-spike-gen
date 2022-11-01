@@ -1,8 +1,9 @@
-#include "event_listener.h"
+#include "listener/event_listener.h"
 
 EventListener::EventListener() {
-    EventListener();
-}
+    void onConnect(const Leap::Controller& controller);
+    void onFrame(const Leap::Controller& controller);
+};
 
 void EventListener::onConnect(const Leap::Controller& controller) {
     std::cout << "Connected" << std::endl;
@@ -10,9 +11,6 @@ void EventListener::onConnect(const Leap::Controller& controller) {
 
 void EventListener::onFrame(const Leap::Controller& controller) {
     std::cout << "Frame available" << std::endl;
-    Leap::Frame frame = controller.frame();
+    Leap::Frame current = controller.frame(0);
+    Leap::Frame previous = controller.frame(1);
 }
-
-// void EventListener::helloWorld() {
-//     std::cout << "This is a new frame" << std::endl;
-// }
