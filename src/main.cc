@@ -1,15 +1,14 @@
 #include <iostream>
 #include <string.h>
 #include "leap/Leap.h"
-#include "listener/event_listener.h"
+#include "listener/framelistener.h"
 
 int main(int argc, char** argv) {
 
-    EventListener listener;
+    FrameListener listener;
     Leap::Controller controller;
-    // if( controller.isConnected()) {
+
     controller.addListener(listener);
-    // }
 
     // Keep this process running until Enter is pressed
     std::cout << "Press Enter to quit..." << std::endl;
