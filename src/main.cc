@@ -1,12 +1,14 @@
-#include <iostream>
 #include <string.h>
+
+#include <iostream>
 
 #include "leap/leap.h"
 #include "listener/framelistener.h"
 
 int main(int argc, char** argv) {
+    int bone_idx = 3; 
 
-    FrameListener listener;
+    FrameListener listener(bone_idx);
     Leap::Controller controller;
 
     controller.addListener(listener);

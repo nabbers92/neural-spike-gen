@@ -5,10 +5,11 @@
 
 class FrameListener : public Leap::Listener {
     private:
-        int timeStart;
+        int time_start_;
+        Leap::Bone::Type bone_type_;
 
     public:
-        FrameListener();
+        FrameListener(int bone_type);
         virtual void onConnect(const Leap::Controller&);
         virtual void onFrame(const Leap::Controller&);
 };
