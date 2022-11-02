@@ -19,6 +19,6 @@ void FrameListener::onFrame(const Leap::Controller& controller) {
   float dt = current.timestamp() - previous.timestamp();
   // std::cout << dt << std::endl;
     
-  Leap::Vector current_position = current.hands()[0].fingers()[1].bone(bone_type_).nextJoint();
+  Leap::Vector current_position = current.hands()[0].fingers()[1].bone(bone_type_).nextJoint() / dt;
   std::cout << current_position << std::endl;
 }
