@@ -1,10 +1,11 @@
 #include "tuning/tuningcurves.h"
 
-float** BaseTuningCurves(const std::string& filename) {
-  float data[38][27];
-  std::ifstream file("sheet.csv");
+struct BaseCurves BaseTuningCurves(const std::string& filename) {
+  struct BaseCurves base_curves;
+  float data[9][360];
+  std::ifstream file(filename);
 
-  for(int row = 0; row < 38; ++row) {
+  for (int row = 0; row < 10; row++) {
     std::string line;
     std::getline(file, line);
     if ( !file.good() )
@@ -12,7 +13,7 @@ float** BaseTuningCurves(const std::string& filename) {
 
     std::stringstream iss(line);
 
-    for (int col = 0; col < 27; ++col) {
+    for (int col = 0; col < 360; col++) {
       std::string val;
       std::getline(iss, val, ',');
       if ( !iss.good() )
@@ -22,5 +23,11 @@ float** BaseTuningCurves(const std::string& filename) {
       convertor >> data[row][col];
     }
   }
-  return data;
+  for (int row = 0; row < 9; row++) {
+    for (int col = 0; col < 360; col++) {
+      base_curves.arr[row][col] = data[row+1][col];
+    } 
+  }
+  
+  return base_curves;
 }

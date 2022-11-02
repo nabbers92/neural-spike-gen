@@ -4,6 +4,10 @@
 #include <fstream>
 #include <sstream>
 
-float** BaseTuningCurves(const std::string& filename);
+struct BaseCurves {
+  float arr[8][360];
+};
+
+struct BaseCurves BaseTuningCurves(const std::string& filename);
 
 #endif
