@@ -3,7 +3,7 @@ ARCH := $(shell uname -m)
 
 # Compiler
 ifeq ($(OS),Darwin)
-	CXX := clang++ -arch x86_64
+	CXX := clang++ -arch $(ARCH)
 else
 	CXX := g++
 endif
