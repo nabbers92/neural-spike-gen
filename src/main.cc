@@ -13,11 +13,11 @@ int main(int argc, char** argv) {
 
   controller.addListener(listener);
 
-    // Keep this process running until Enter is pressed
+  // Keep this process running until Enter is pressed
   std::cout << "Press Enter to quit..." << std::endl;
   std::cin.get();
 
-    // Remove the sample listener when done
+  // Remove the sample listener when done
   controller.removeListener(listener);
 
   return 0;
