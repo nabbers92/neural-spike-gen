@@ -4,6 +4,6 @@
 #include <string>
 #include <vector>
 
-std::vector<vector<float>> ReadBaseCurves(const string &str);
+std::vector<std::vector<float>> ReadBaseCurves(const std::string &filename);
 
 #endif
