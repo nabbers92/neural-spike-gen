@@ -1,12 +1,16 @@
 #include <string.h>
 
 #include <iostream>
+#include <vector>
 
 #include "leap/Leap.h"
 #include "listener/framelistener.h"
+#include "tuning/tuningcurves.h"
 
 int main(int argc, char** argv) {
-  int bone_idx = 3; 
+  int bone_idx = 3;
+
+  std::vector<std::vector<float>> base = ReadBaseCurves("src/basecurves.csv");
 
   FrameListener listener(bone_idx);
   Leap::Controller controller;
