@@ -1,4 +1,4 @@
-#include "tuning/tuningcurves.h"
+#include "firing/tuningcurves.h"
 
 #include <algorithm>
 #include <iostream>
@@ -60,5 +60,5 @@ std::vector<std::vector<float>> CreateTuningCurves(
 
 void MultiplyVectorByScalar(std::vector<float> vector, float scalar){
     std::transform(vector.begin(), vector.end(), vector.begin(), 
-                      [scalar](float v){ return v*scalar;});
+                   [scalar](float v){ return v*scalar;});
 }

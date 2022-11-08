@@ -5,7 +5,7 @@
 
 #include "leap/Leap.h"
 #include "listener/framelistener.h"
-#include "tuning/tuningcurves.h"
+#include "firing/tuningcurves.h"
 
 int main(int argc, char** argv) {
   int bone_idx = 3;

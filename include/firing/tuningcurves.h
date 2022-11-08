@@ -1,5 +1,5 @@
-#ifndef TUNING_TUNINGCURVES_H
-#define TUNING_TUNINGCURVES_H
+#ifndef FIRING_TUNINGCURVES_H
+#define FIRING_TUNINGCURVES_H
 
 #include <vector>
 
