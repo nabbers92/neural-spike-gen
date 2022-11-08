@@ -3,6 +3,10 @@
 
 #include <vector>
 
-float GetAngle(float vx, float vz);
+#include "leap/Leap.h"
+
+int GetAngle(float vx, float vz);
+
+std::vector<std::vector<int>> GenerateSpikes(Leap::Vector);
 
 #endif

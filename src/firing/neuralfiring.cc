@@ -1,4 +1,4 @@
-#include "firing/neuralfirings.h"
+#include "firing/neuralfiring.h"
 
 #include <math.h>
 
@@ -8,6 +8,10 @@
 #include "firing/tuningcurves.h"
 #include "leap/Leap.h"
 
-float GetAngle(float vx, float vz) {
-  
+int GetAngle(float vx, float vz) {
+  const float kPi = 3.14159265;
+  int angle = atan2(vz, vx) * 180 / kPi;
+  angle = angle % 360;
+
+  return angle;
 }
