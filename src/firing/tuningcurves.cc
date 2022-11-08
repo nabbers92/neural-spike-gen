@@ -14,7 +14,7 @@ std::vector<std::vector<float>> ReadBaseCurves(const char* filename) {
   std::ifstream datafile (filename);
 
   if (!datafile.is_open()) {     /* validate file open for reading */
-        perror (("error while opening file " + std::string(filename)).c_str());
+        perror(("error while opening file " + std::string(filename)).c_str());
     }
 
   while (std::getline(datafile, line)) {
