@@ -17,8 +17,9 @@ void FrameListener::onFrame(const Leap::Controller& controller) {
   Leap::Frame current = controller.frame(0);
   Leap::Frame previous = controller.frame(1);
   float dt = current.timestamp() - previous.timestamp();
-  // std::cout << dt << std::endl;
     
-  Leap::Vector current_position = current.hands()[0].fingers()[1].bone(bone_type_).nextJoint() / dt;
+  Leap::Vector current_position = current.hands()[0].fingers()[1].bone(bone_type_).nextJoint();
+  Leap::Vector prev_position = previous.hands()[0].fingers()[1].bone(bone_type_).nextJoint();
+  Leap::Vector velocities = (current_position - prev_position)/dt;
   std::cout << current_position << std::endl;
 }
