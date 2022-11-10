@@ -9,7 +9,7 @@
 #if !defined(__Leap_h__)
 #define __Leap_h__
 
-#include "leap/LeapMath.h"
+#include "LeapMath.h"
 #include <string>
 #include <vector>
 #include <cstring>
