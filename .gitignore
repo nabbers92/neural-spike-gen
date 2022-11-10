@@ -1,9 +1,6 @@
 # Ignore build dir
 build
 
-# Ignore executibles
-bin/*
-
 # Ignore mac files
 .DS_Store
 
