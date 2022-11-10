@@ -1,4 +1,4 @@
-#include "neuralfiring.h"
+#include "include/neuralfiring.h"
 
 #include <math.h>
 
@@ -6,8 +6,8 @@
 #include <random>
 #include <vector>
 
-#include "tuningcurves.h"
-#include "Leap.h"
+#include "include/tuningcurves.h"
+#include "include/Leap.h"
 
 int GetAngle(float vx, float vz)
 {
