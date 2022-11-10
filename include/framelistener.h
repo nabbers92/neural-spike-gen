@@ -10,7 +10,8 @@ private:
   Leap::Bone::Type bone_type_;
 
 public:
-  FrameListener(int bone_type);
+  FrameListener(int bone_type)
+      : Leap::Listener(){};
   virtual void onConnect(const Leap::Controller &){};
   virtual void onFrame(const Leap::Controller &){};
 };

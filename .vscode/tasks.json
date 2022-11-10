@@ -12,7 +12,7 @@
                 "-Llib/x64/",
                 "-lLeap",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/build/spikegen"
             ],
             "options": {
                 "cwd": "${fileDirname}"

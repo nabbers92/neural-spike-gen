@@ -16,7 +16,7 @@ int main(int argc, char **argv)
     //   std::vector<std::vector<float>> tuning_curves = CreateTuningCurves(
     //       base, 5, 192);
     //   std::cout << tuning_curves.size() << std::endl;
-    FrameListener listener;
+    FrameListener listener(bone_idx);
     Leap::Controller controller;
 
     controller.addListener(listener);
