@@ -3,14 +3,14 @@
 #include <iostream>
 #include <vector>
 
-#include "leap/Leap.h"
-#include "listener/framelistener.h"
-#include "firing/tuningcurves.h"
+#include "include/Leap.h"
+#include "include/framelistener.h"
+#include "include/tuningcurves.h"
 
 int main(int argc, char** argv) {
   int bone_idx = 3;
 
-  std::vector<std::vector<float>> base = ReadBaseCurves("data/basecurves.csv");
+  std::vector<std::vector<float> > base = ReadBaseCurves("data/basecurves.csv");
 
   FrameListener listener(bone_idx);
   Leap::Controller controller;

@@ -1,7 +1,7 @@
 #ifndef LISTENER_FRAMELISTENER_H
 #define LISTENER_FRAMELISTENER_H
 
-#include "leap/Leap.h"
+#include "Leap.h"
 
 class FrameListener : public Leap::Listener {
  private:
