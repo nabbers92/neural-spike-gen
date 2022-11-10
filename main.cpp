@@ -5,7 +5,7 @@
 
 #include "include/Leap.h"
 #include "include/framelistener.h"
-// #include "include/tuningcurves.h"
+#include "include/tuningcurves.h"
 
 int main(int argc, char **argv)
 {
@@ -16,7 +16,7 @@ int main(int argc, char **argv)
     //   std::vector<std::vector<float>> tuning_curves = CreateTuningCurves(
     //       base, 5, 192);
     //   std::cout << tuning_curves.size() << std::endl;
-    FrameListener listener(bone_idx);
+    FrameListener listener;
     Leap::Controller controller;
 
     controller.addListener(listener);

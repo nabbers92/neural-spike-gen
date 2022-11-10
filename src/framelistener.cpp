@@ -1,11 +1,11 @@
 #include "include/framelistener.h"
 
-FrameListener::FrameListener(int bone_type)
-{
-  void onConnect(const Leap::Controller &controller);
-  void onFrame(const Leap::Controller &controller);
-  bone_type_ = static_cast<Leap::Bone::Type>(bone_type);
-};
+// FrameListener::FrameListener(int bone_type)
+// {
+//   void onConnect(const Leap::Controller &controller);
+//   void onFrame(const Leap::Controller &controller);
+//   bone_type_ = static_cast<Leap::Bone::Type>(bone_type);
+// };
 
 void FrameListener::onConnect(const Leap::Controller &controller)
 {
@@ -21,8 +21,8 @@ void FrameListener::onFrame(const Leap::Controller &controller)
   Leap::Frame previous = controller.frame(1);
   float dt = current.timestamp() - previous.timestamp();
 
-  Leap::Vector current_position = current.hands()[0].fingers()[1].bone(bone_type_).nextJoint();
-  Leap::Vector prev_position = previous.hands()[0].fingers()[1].bone(bone_type_).nextJoint();
-  Leap::Vector velocities = (current_position - prev_position) / dt;
-  std::cout << current_position << std::endl;
+  // Leap::Vector current_position = current.hands()[0].fingers()[1].bone().nextJoint();
+  // Leap::Vector prev_position = previous.hands()[0].fingers()[1].bone().nextJoint();
+  // Leap::Vector velocities = (current_position - prev_position) / dt;
+  // std::cout << current_position << std::endl;
 }

@@ -1,9 +1,9 @@
-#ifndef FIRING_NEURALFIRING_H
-#define FIRING_NEURALFIRING_H
+#ifndef NEURALFIRING_H
+#define NEURALFIRING_H
 
 #include <vector>
 
-#include "leap/Leap.h"
+#include "Leap.h"
 
 int GetAngle(float vx, float vz);
 
