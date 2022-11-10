@@ -6,6 +6,5 @@ build
 
 # Ignore Visual Studio Code folder but include build/debug files
 .vscode/**
-!.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
