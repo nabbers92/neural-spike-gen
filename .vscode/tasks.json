@@ -9,10 +9,10 @@
                 "-g",
                 "-I./include",
                 "${file}",
-                "-Llib/x64/",
-                "-lLeap",
                 "-o",
-                "${fileDirname}/build/spikegen"
+                "${fileDirname}/build/spikegen",
+                "lib/x64/libLeap.so",
+                "-Wl,-rpath,lib/x64"
             ],
             "options": {
                 "cwd": "${fileDirname}"
