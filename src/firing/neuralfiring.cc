@@ -43,6 +43,8 @@ std::vector<int> GenerateSpikes(Leap::Vector velocity, float dt, int n_units,
   for (int i = 0; i < firing_rate.size(); i++) {
     if (real_distribution(generator) < firing_rate[i]*dt) {
       spikes[i] = 1;
+    } else {
+      spikes[i] = 0;
     }
   }
 

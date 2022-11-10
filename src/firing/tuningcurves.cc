@@ -54,7 +54,7 @@ std::vector<std::vector<float>> CreateTuningCurves(
     MultiplyVectorByScalar(temp, scalar);
     tuning_curves.push_back(temp);
   }
-  std::cout << tuning_curves.size() << std::endl;
+  
   return tuning_curves; 
 }
 
