@@ -7,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "-I./include",
+                "-Iinclude",
                 "${file}",
                 "-o",
                 "${fileDirname}/build/spikegen",
