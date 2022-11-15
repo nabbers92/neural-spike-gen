@@ -4,7 +4,6 @@ build
 # Ignore mac files
 .DS_Store
 
-# Ignore Visual Studio Code folder but include build/debug files
+# Ignore Visual Studio Code folder
 .vscode/**
-!.vscode/tasks.json
-!.vscode/launch.json
+.vscode
