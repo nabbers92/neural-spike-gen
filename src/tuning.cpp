@@ -1,4 +1,4 @@
-#include "include/tuningcurves.h"
+#include "include/tuning.h"
 
 #include <algorithm>
 #include <iostream>

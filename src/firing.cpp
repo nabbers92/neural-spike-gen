@@ -1,4 +1,4 @@
-#include "include/neuralfiring.h"
+#include "include/firing.h"
 
 #include <math.h>
 
@@ -6,8 +6,7 @@
 #include <random>
 #include <vector>
 
-#include "include/tuningcurves.h"
-#include "include/Leap.h"
+#include "include/tuning.h"
 
 int GetAngle(float vx, float vz)
 {
@@ -31,9 +30,9 @@ std::vector<int> ExtractColumn(const std::vector<std::vector<float>> &matrix,
   return result;
 }
 
-std::vector<int> GenerateSpikes(Leap::Vector velocity, float dt, int n_units,
-                                std::vector<std::vector<float>> tuning_curves,
-                                int seed)
+std::vector<int> GenerateSpikes(
+    std::vector<float> velocity, float dt, int n_units,
+    std::vector<std::vector<float>> tuning_curves, int seed)
 {
   std::vector<int> spikes;
   std::default_random_engine generator;
