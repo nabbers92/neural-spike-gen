@@ -8,7 +8,7 @@ add_subdirectory(src)
 add_subdirectory(include)
 option(BUILD_EXAMPLES "Whether or not to build examples" ON)
 
-if (BUILD_EXAMPLES)
+if (BUILD_EXAMPLES MATCHES ON)
     message(STATUS "Building examples...")
     add_subdirectory(example)
 endif()

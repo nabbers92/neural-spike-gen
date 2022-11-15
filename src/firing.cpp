@@ -1,4 +1,4 @@
-#include "neuralspike/firing.h"
+#include "spikes/firing.h"
 
 #include <math.h>
 
@@ -6,7 +6,7 @@
 #include <random>
 #include <vector>
 
-#include "neuralspike/tuning.h"
+#include "spikes/tuning.h"
 
 int GetAngle(float vx, float vz) {
   const float kPi = 3.14159265;
