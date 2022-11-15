@@ -1,4 +1,4 @@
-#include "include/firing.h"
+#include "neuralspike/firing.h"
 
 #include <math.h>
 
@@ -6,10 +6,9 @@
 #include <random>
 #include <vector>
 
-#include "include/tuning.h"
+#include "neuralspike/tuning.h"
 
-int GetAngle(float vx, float vz)
-{
+int GetAngle(float vx, float vz) {
   const float kPi = 3.14159265;
   int angle = atan2(vz, vx) * 180 / kPi;
   angle = angle % 360;
@@ -18,22 +17,20 @@ int GetAngle(float vx, float vz)
 }
 
 std::vector<int> ExtractColumn(const std::vector<std::vector<float>> &matrix,
-                               int col_idx)
-{
+                               int col_idx) {
   std::vector<int> result;
 
-  for (const auto &row : matrix)
-  {
+  for (const auto &row : matrix) {
     result.push_back(row[col_idx]);
   }
 
   return result;
 }
 
-std::vector<int> GenerateSpikes(
-    std::vector<float> velocity, float dt, int n_units,
-    std::vector<std::vector<float>> tuning_curves, int seed)
-{
+std::vector<int> GenerateSpikes(std::vector<float> velocity, float dt,
+                                int n_units,
+                                std::vector<std::vector<float>> tuning_curves,
+                                int seed) {
   std::vector<int> spikes;
   std::default_random_engine generator;
   generator.seed(seed);
@@ -43,14 +40,10 @@ std::vector<int> GenerateSpikes(
   int phi = GetAngle(vx, vz);
   std::vector<int> firing_rate = ExtractColumn(tuning_curves, phi);
 
-  for (int i = 0; i < firing_rate.size(); i++)
-  {
-    if (real_distribution(generator) < firing_rate[i] * dt)
-    {
+  for (int i = 0; i < firing_rate.size(); i++) {
+    if (real_distribution(generator) < firing_rate[i] * dt) {
       spikes[i] = 1;
-    }
-    else
-    {
+    } else {
       spikes[i] = 0;
     }
   }
