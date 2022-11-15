@@ -1,3 +1,2 @@
 # Neural Spike Generator
-This program uses the LeapMotion controller to record hand position and generate artificial neuron firings based on hand movement in a two-dimensional plane. 
-More to come...
+This library simulates neuron firings based off of hand movement. It is designed to take in velocity vectors and use this to generate spiking data which can then be used to test neural decoders. Specifically, it will be used in the future with Leap Motion controllers to capture motion data and use these velocities to generate artificial firings.
