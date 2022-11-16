@@ -35,8 +35,9 @@ std::vector<std::vector<float>> ReadBaseCurves(const char *filename) {
   return base_curves;
 }
 
-std::vector<std::vector<float>> CreateTuningCurves(
-    std::vector<std::vector<float>> base_curves, int seed, int n_units) {
+std::vector<std::vector<float>>
+CreateTuningCurves(std::vector<std::vector<float>> base_curves, int seed,
+                   int n_units) {
   std::vector<std::vector<float>> tuning_curves;
   std::default_random_engine generator;
   generator.seed(seed);
