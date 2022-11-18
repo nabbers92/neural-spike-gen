@@ -5,6 +5,8 @@
 
 int main() {
     std::cout << "Hello, world!" << std::endl;
-    return 0;
+    std::vector<std::vector<float>> base;
+    base = ReadBaseCurves("../../data/basecurves.csv");
 
+    return 0;
 }
