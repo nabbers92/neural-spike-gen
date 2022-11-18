@@ -5,6 +5,10 @@ include(FetchContent)
 FetchContent_Declare(
     googletest
     URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+<<<<<<< HEAD
+=======
+    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+>>>>>>> ce2fd6949829e8fcd865371f9ff214535117184e
 )
 
 FetchContent_GetProperties(googletest)
