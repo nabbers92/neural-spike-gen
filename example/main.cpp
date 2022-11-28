@@ -8,8 +8,8 @@
 int main() {
   std::cout << "Hello, world!" << std::endl;
 
-  std::vector<std::vector<float>> base;
-  base = ReadBaseCurves("../../data/basecurves.csv");
+  // std::vector<std::vector<float>> base;
+  // base = ReadBaseCurves("../../data/basecurves.csv");
 
   std::vector<std::vector<float>> base =
       ReadBaseCurves("../../data/basecurves.csv");

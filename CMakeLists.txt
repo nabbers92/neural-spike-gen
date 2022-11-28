@@ -16,14 +16,10 @@ if (BUILD_EXAMPLES MATCHES ON)
     add_subdirectory(example)
 endif()
 
-if (BUILD_TESTS MATCHES ON)
-    message(STATUS "Building tests...")
-    add_subdirectory(tests)
-endif()
-<<<<<<< HEAD
-=======
-
->>>>>>> ce2fd6949829e8fcd865371f9ff214535117184e
+# if (BUILD_TESTS MATCHES ON)
+#     message(STATUS "Building tests...")
+#     add_subdirectory(tests)
+# endif()
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
